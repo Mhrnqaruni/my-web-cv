@@ -2,46 +2,43 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="flex items-center bg-white dark:bg-slate-900 min-h-[calc(100vh-4rem)] py-20">
+    <section id="hero" className="bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-5 items-center gap-16 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between py-20 md:py-28 gap-12">
           
-          {/* Left Column: Image with Decorative Frame */}
-          <div className="lg:col-span-2 relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
-            <div className="absolute inset-0 border-2 border-primary rounded-lg transform -rotate-3 transition-transform duration-300"></div>
-            <img 
-              src="https://avatars.githubusercontent.com/u/75912386?v=4" 
-              alt="Mehran Gharooni Khoshkehbar" 
-              className="relative w-full h-full object-cover rounded-lg shadow-2xl"
-            />
+          {/* Image on the Left (on desktop) */}
+          <div className="md:w-2/5 flex justify-center mb-10 md:mb-0">
+             <div className="relative w-64 h-64 md:w-80 md:h-80">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full opacity-40 blur-2xl animate-pulse-slow"></div>
+                <img 
+                    src="https://avatars.githubusercontent.com/u/75912386?v=4" 
+                    alt="Mehran Gharooni" 
+                    className="relative w-full h-full rounded-full object-cover border-4 border-slate-200 dark:border-slate-700 shadow-2xl"
+                />
+            </div>
           </div>
 
-          {/* Right Column: Text Content */}
-          <div className="lg:col-span-3 text-center lg:text-left">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
-              Mehran Gharooni Khoshkehbar
+          {/* Text Content on the Right (on desktop) */}
+          <div className="md:w-3/5 text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight">
+              Mehran Gharooni
             </h1>
-            <p className="mt-6 text-xl text-gray-600 dark:text-gray-300">
+            <p className="mt-4 text-xl md:text-2xl text-primary dark:text-blue-400 font-semibold">
               AI Researcher & Engineer
             </p>
-            <p className="mt-4 max-w-2xl mx-auto lg:mx-0 text-lg text-gray-500 dark:text-gray-400">
-              Architecting the next generation of trustworthy AI to solve tangible challenges in science and industry.
+            <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto md:mx-0">
+              Building the next generation of trustworthy AI to solve real-world challenges in science, healthcare, and security.
             </p>
-            <div className="mt-10 flex justify-center lg:justify-start gap-x-6">
-              <a
-                href="#publications"
-                className="rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-300 transform hover:-translate-y-1"
-              >
-                View Publications
+            <div className="mt-8 flex justify-center md:justify-start space-x-4">
+              <a href="#experience" className="bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300">
+                View Experience
               </a>
-              <a
-                href="#contact"
-                className="rounded-md bg-gray-200 dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-gray-800 dark:text-gray-200 shadow-lg hover:bg-gray-300 dark:hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400 transition-all duration-300 transform hover:-translate-y-1"
-              >
+              <a href="#contact" className="bg-gray-200 hover:bg-gray-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-md transition-colors duration-300">
                 Get In Touch
               </a>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
